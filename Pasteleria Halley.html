@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Halley</title>
+    <style>
+         * {
+            box-sizing: border-box;
+            background-color:rgba(79, 115, 126, 0.993);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input 
+        {background-color: aliceblue;
+        }
+        h1,h2{
+            text-align: center;
+        }
+        p {text-align: justify;
+            font-size: large;
+            font-weight:normal;
+            color: rgb(242, 243, 233);
+        }
+        footer {
+            text-align: center;
+            color: aliceblue;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>PASTELERIA HALLEY</h1>
+    <br>
+    <center>
+        <img src="C:\LAUNCHX\FrontEnd\HTML\PASTELERIA\pasteles_cosmicos.png"  alt="Pasteles Cosmicos" width="500px" height="500px">
+    </center>
+    <br>
+    <h2>Bienvenido a Pasteleria Halley</h2>
+    <br><hr><br><br>
+
+    <p>En pasteleria Halley tenemos 15 años de experiencia realizando pasteles de gran sabor. Todo comenzó con el maestro pastelero Cometa Pérez  y su gusto por la repostería. El solía hornear pasteles para sus hijos los cuales se lo comían a la velocidad de la luz.
+        <br><br> De ahí que se inspiro en realizar primero pasteles para los amigos de sus hijos, los cuales lo recomendaron con sus padres y demás niños, hasta tener muchas personas que le solicitaban pasteles con pedidos especiales.
+        <br><br> Parte del éxito del maestro pastelero Cometa ha sido la calidad de sus ingredientes y el esmero y respeto que tiene por su profesión.
+        </p> 
+
+
+
+    <h2>A continuación le ayudaremos a realizar su orden</h2>
+    <br><br><br>
+
+    <h3>¿Cual es el sabor de pastel que deseas?</h3>
+    <label for= "sabor">Elije el sabor de pan preferido</label><br>
+    <input list= "sabor"> 
+    <datalist id= "sabor">
+        <option value= "Chocolate       $200.00 ">
+        <option value= "Vainilla        $180.00">
+        <option value= "Marmoleado      $210.00">
+        <option value= "Red velvet      $250.00">
+        <option value= "Fresa           $180.00">
+    </datalist>
+    <br><br><br>
+
+
+    <h3>¿De que quieres el relleno de tu pastel?</h3>
+    <label for= "relleno1">Elige tu relleno favorito</label>
+    <input list= "relleno1">
+    <datalist id= "relleno1">
+        <option value= "Fresa">
+        <option value= "Chabacano ">
+        <option value= "Naranja">
+        <option value= "Mango">
+        <option value= "Zarzamora">
+        <option value= "Licor de Café">
+        <option value= "Licor de cereza">
+        <option value= "Chcolate">
+        <option value= "Chantilly">
+        <option value= "Sin relleno" >
+        </datalist>
+        <br><br>
+
+    <h3>¿Deseas otro relleno?</h3>
+            <label for= "relleno2">Elige tu segundo relleno</label>
+            <input list= "relleno2">
+            <datalist id= "relleno2">
+                <option value= "No quiero otro relleno">
+                <option value= "Fresa +$20.00">
+                <option value= "Chabacano +$20.00">
+                <option value= "Naranja +$20.00">
+                <option value= "Mango +$20.00">
+                <option value= "Zarzamora +$20.00">
+                <option value= "Licor Café +$25.00">
+                <option value= "Licor de cereza +$30.00">
+                <option value= "Chcolate +$25.00">
+                <option value= "Chantilly   +$15.00">    
+    </datalist>
+
+    <br><br><br>
+
+    <h3>¿Con que quieres que lo decoremos?</h3>
+    <input type="radio" id="Betun" name="decoracion" value="Betún">
+    <label for="Betún">Betún</label><br>
+    <input type="radio" id="Merengue" name="decoracion" value="Merengue">
+    <label for="Merengue">Merengue</label><br>
+    <input type="radio" id="Fondant" name="Decoracion" value="Fondant">
+    <label for="Fondant">Fondant</label><br>
+    <input type="radio" id="Ganesh" name="Decoracion" value="Ganesh">
+    <label for="Ganesh">Ganesh</label><br><br>
+
+    <h3>¿Qué color usamos en tu decoración?</h3><br>
+
+    <input type="color" id="color1" name="color1"><br><br>
+
+    <h3>¿Quieres que le pongamos alguna leyenda?</h3>
+    <input type="radio" id="leyenda si" name="leyenda" value="leyenda si">
+    <label for="leyenda si">Sí</label>
+    <input type="radio" id="leyyenda no" name="leyenda" value="leyenda no">
+    <label for="leyenda no">No</label><br><br>
+
+    <label for="leyenda1"> Escribe tu leyenda</label><br>
+    <input type="text" id="leyenda1" name="leyenda1"><br><br>
+    
+    <hr>
+    <h3>¿Para cuando lo quieres?</h3>
+    <br>
+    <input type="date" id="fecha1" name="fecha1"><br>
+    <input type="time" id="fecha4" name="fecha4"><br>
+    
+    <hr>
+    <h3>A continuacion tomaremos los datos de tu orden</h3>
+    <form action="/accion.js" id="form" method="post">
+        <label for="Nombre">Nombre(s)</label><br>
+        <input type="text" id="Nombre" name="nombre"><br><br>
+        <label for="Apellidos">Apellidos</label><br>
+        <input type="text" id="apellidos" name="apellidos"><br><br>
+        <label for="email">Correo electronico</label><br>
+        <input type="emalil" id="email" name="email"><br><br>
+        <label for="tel">Telefóno</label><br>
+        <input type="tel" id="telefono" name="tel"><br><br>
+    </form>
+
+    <input type="reset"><br>
+    <input type="submit" onclick="alert('Su pedido ha sido realizado')"><br><br>
+        <footer>A tus ordenes de Martes a Domingo de 10:00 a 20:00 hrs <br>
+            Domicilio conocido en el sistema solar de la vía láctea <br>
+            Telefono:55-55-55-55-55
+</body>
+</html>
